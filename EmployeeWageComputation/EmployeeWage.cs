@@ -15,17 +15,31 @@ namespace EmployeeWageComputation
         }
         public void DailyEmpWage()
         {
+            int wage = WAGE_PER_HR * FULL_DAY_HR;
+            Console.WriteLine("Daily Wage: " + wage);
+        }
+        public void PartTimeEmp()
+        {
             int empHrs = 0;
             Random random = new Random();
             int check = random.Next(0,3);
-            if (check == IS_FULL_TIME)
-                empHrs = FULL_DAY_HR;
-            if (check == IS_PART_TIME)
-                empHrs = PART_TIME_HR;
-            else
-                empHrs = 0;
+            switch (check)
+            {
+                case IS_FULL_TIME:
+                    empHrs = FULL_DAY_HR;
+                    Console.WriteLine("Employee Present with Full Time");
+                    break;
+                case IS_PART_TIME:
+                    empHrs = PART_TIME_HR;
+                    Console.WriteLine("Employee Present with Part Time");
+                    break;
+                default:
+                    empHrs = 0;
+                    Console.WriteLine("Employee is Absent");
+                    break;
+            }
             int wage = WAGE_PER_HR * empHrs;
-            Console.WriteLine(wage);
+            Console.WriteLine("Wage is: " +wage);
         }
     }
 }

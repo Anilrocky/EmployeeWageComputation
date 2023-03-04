@@ -10,6 +10,9 @@ namespace EmployeeWageComputation
             employeeWage.Attendance();
             EmployeeWage dailyEmpWage = new EmployeeWage();
             dailyEmpWage.DailyEmpWage();
+            EmployeeWage partTime = new EmployeeWage();
+            partTime.PartTimeEmp();
+
         }
     }
 }
