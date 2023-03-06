@@ -39,7 +39,7 @@ namespace EmployeeWageComputation
                 }
             }
             int wage = WAGE_PER_HR * empHrs;
-            Console.WriteLine("Wage is: " +wage);
+            Console.WriteLine("Monthly Wage is: " +wage);
         }
     }
 }

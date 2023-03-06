@@ -8,11 +8,8 @@ namespace EmployeeWageComputation
             Console.WriteLine("Welcome to Employee Wage Computation");
             EmployeeWage employeeWage = new EmployeeWage();
             employeeWage.Attendance();
-            EmployeeWage dailyEmpWage = new EmployeeWage();
-            dailyEmpWage.DailyEmpWage();
-            EmployeeWage monthlyWage = new EmployeeWage();
-            monthlyWage.WageForMonth();
-
+            employeeWage.DailyEmpWage();
+            employeeWage.WageForMonth();
         }
     }
 }
