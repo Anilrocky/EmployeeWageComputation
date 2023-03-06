@@ -15,15 +15,10 @@ namespace EmployeeWageComputation
         }
         public void DailyEmpWage()
         {
-            int wage = WAGE_PER_HR * FULL_DAY_HR;
-            Console.WriteLine("Daily Wage: " + wage);
-        }
-        public void WageForMonth()
-        {
             int empHrs = 0;
             Random random = new Random();
-            int check = random.Next(0,3);
-            for (int i = 0; i <=TOTAL_WORKING_DAYS && empHrs<=TOTAL_WORKING_HOURS; i++)
+            int check = random.Next(0, 3);
+            for (int i = 0; i <= TOTAL_WORKING_DAYS && empHrs <= TOTAL_WORKING_HOURS; i++)
             {
                 switch (check)
                 {
@@ -39,7 +34,7 @@ namespace EmployeeWageComputation
                 }
             }
             int wage = WAGE_PER_HR * empHrs;
-            Console.WriteLine("Monthly Wage is: " +wage);
+            Console.WriteLine("Wage is: " + wage);
         }
     }
 }
